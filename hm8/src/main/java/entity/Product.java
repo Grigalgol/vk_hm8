@@ -15,18 +15,18 @@ public class Product {
     @JsonProperty("name")
     private @NotNull String name;
 
-    @JsonProperty("companyName")
-    private @NotNull String companyName;
+    @JsonProperty("companyId")
+    private @NotNull Integer companyId;
 
     @JsonProperty("count")
     private @NotNull Integer count;
 
     @JsonCreator
     public Product(@JsonProperty(value = "name", required = true) String name,
-                   @JsonProperty(value = "factoryName", required = true) String companyName,
+                   @JsonProperty(value = "companyId", required = true) Integer companyId,
                    @JsonProperty(value = "count", required = true) Integer count){
         this.name = name;
-        this.companyName = companyName;
+        this.companyId = companyId;
         this.count = count;
     }
 }
