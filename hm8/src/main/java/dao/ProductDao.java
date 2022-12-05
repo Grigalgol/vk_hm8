@@ -76,7 +76,7 @@ public class ProductDao {
             int i = context.delete(Tables.PRODUCT).where(Tables.PRODUCT.NAME.eq(name)).execute();
             return i > 0;
         } catch (SQLException e) {
-            throw new RuntimeException(e);
+            return false;
         }
     }
 

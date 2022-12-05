@@ -24,12 +24,12 @@ public class SecurityHandlerBuilder {
         final List<ConstraintMapping> constraintMappings = new ArrayList<>();
         constraintMappings.addAll(constraintFullMapping(
                 buildConstraint(ROLE_MANAGER),
-                Collections.singletonList("/products")
+                new ArrayList<>(List.of(new String[]{"/products", "/products/*", "/companies", "/companies/*"}))
         ));
 
         constraintMappings.addAll(constraintGetMapping(
                 buildConstraint(ROLE_GUEST, ROLE_MANAGER),
-                Collections.singletonList("/products")
+                new ArrayList<>(List.of(new String[]{"/products", "/products/*", "/companies", "/companies/*"}))
         ));
 
         security.setConstraintMappings(constraintMappings);

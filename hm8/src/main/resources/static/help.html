@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Справка</title>
+</head>
+<body>
+    <h3>Запросы, которые доступны гостю и менеджеру:</h3>
+    <p>http://localhost:3466/products/all - GET запрос, отдает все продукты</p>
+    <p>http://localhost:3466/products/allByCompany?name=companyName - GET запрос, отдает все продукты, которые были произведены компанией с именем companyName</p>
+    <br>
+    <h3>Запросы, которые доступны только менеджеру:</h3>
+    <p>http://localhost:3466/products/delete?name=productName - POST запрос, удаляет продукт с именем product name</p>
+    <p>http://localhost:3466/products/save (в body передать JSON: {"name": "productName", "companyName": "companyName", "count": 10}) - POST запрос, сохраняет продукт, с данными из Body</p>
+</body>
+</html>

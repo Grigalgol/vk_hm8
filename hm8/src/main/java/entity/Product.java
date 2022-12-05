@@ -11,22 +11,19 @@ import org.jetbrains.annotations.NotNull;
 public class Product {
     @JsonProperty("id")
     private @NotNull Integer id;
-
     @JsonProperty("name")
     private @NotNull String name;
-
     @JsonProperty("companyId")
     private @NotNull Integer companyId;
-
     @JsonProperty("count")
     private @NotNull Integer count;
 
     @JsonCreator
     public Product(@JsonProperty(value = "name", required = true) String name,
-                   @JsonProperty(value = "companyId", required = true) Integer companyId,
-                   @JsonProperty(value = "count", required = true) Integer count){
+                      @JsonProperty(value = "companyId", required = true) Integer  companyId,
+                      @JsonProperty(value = "count", required = true) Integer count){
         this.name = name;
-        this.companyId = companyId;
+        this.companyId =  companyId;
         this.count = count;
     }
 }
